@@ -43,5 +43,8 @@
 }
 	/*video::-webkit-media-controls-enclosure {
 		display: none !important;
-	}*/
+  }*/
+  #app {
+    height: 100vh;
+  }
 </style>

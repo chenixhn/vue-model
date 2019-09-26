@@ -36,6 +36,10 @@ export default [
       component: resolve => require(['@/components/pages/demo/txDemo/txDemo'],resolve)
     },
     {
+      path: '/926demo',
+      component: resolve => require(['@/components/pages/demo/926demo/index'],resolve)
+    },
+    {
       path: '/userAudit',
       component: resolve => require(['@/components/pages/userAudit/userAudit'],resolve)
     }

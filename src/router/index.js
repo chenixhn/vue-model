@@ -16,7 +16,7 @@ router.beforeEach(({path},from,next)=>{
   let isLogin = sessionStorage.getItem('isLogin');
   console.log(isLogin);
   if(isLogin != 'true' && path !== '/login' && path !== '/register' && path !== '/resetPwd'){
-    return next({path:'/login'})
+    return next({path:'/926demo'})//配置跳转页面
   }
 
   next();
