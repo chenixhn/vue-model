@@ -1,46 +1,30 @@
 export default [
-    {
-      path: '/',
-      redirect: '/login'
-    },
-    {
-      path: '/login',
-      component: resolve => require(['@/components/pages/login/login'],resolve)
-    },
-    {
-      path: '/register',
-      component: resolve => require(['@/components/pages/register/register'],resolve)
-    },
-    {
-      path: '/playing',
-      component: resolve => require(['@/components/pages/playing/playing'],resolve)
-    },
-    {
-      path: '/playback',
-      component: resolve => require(['@/components/pages/playback/playback'],resolve)
-    },
-    {
-      path: '/resetPwd',
-      component: resolve => require(['@/components/pages/resetPwd/resetPwd'],resolve)
-    },
-    {
-      path: '/index',
-      component: resolve => require(['@/components/pages/index/index'],resolve)
-    },
-    {
-      path: '/userManegement',
-      component: resolve => require(['@/components/pages/usermanage/userManegement'],resolve)
-    },
-    {
-      path: '/txDemo',
-      component: resolve => require(['@/components/pages/demo/txDemo/txDemo'],resolve)
-    },
-    {
-      path: '/926demo',
-      component: resolve => require(['@/components/pages/demo/926demo/index'],resolve)
-    },
-    {
-      path: '/userAudit',
-      component: resolve => require(['@/components/pages/userAudit/userAudit'],resolve)
-    }
+  {
+    path: '/',
+    redirect: '/index'
+  },
+  {
+    path: '/index',
+    component: resolve => require(['@/components/pages/index/index'],resolve)
+  },
+  {
+    path: '/txDemo',
+    component: resolve => require(['@/components/pages/demo/txDemo/txDemo'],resolve)
+  },
+  {
+    path: '/computedDemo',
+    component: resolve => require(['@/components/pages/demo/computedDemo/index'],resolve)
+  },
+  {
+    path: '/eleDemo',
+    component: resolve => require(['@/components/pages/demo/flexDemo/eleDemo'],resolve)
+  },
+  {
+    path: '/flexDemo',
+    component: resolve => require(['@/components/pages/demo/flexDemo/flexDemo'],resolve)
+  },
+  {
+    path: '/promiseDemo',
+    component: resolve => require(['@/components/pages/demo/promiseDemo/promiseDemo'],resolve)
+  }
 ]

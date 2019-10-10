@@ -1,34 +1,27 @@
 <template>
-    <el-container>
-        <el-header>Header</el-header>
-        <el-container>
-            <el-aside width="200px">Aside</el-aside>
-            <el-main>
-                <el-row>
-                     <el-input v-model="inpText" placeholder="请输入内容进行筛选" style="width:30%;margin-bottom:10px;"></el-input>
-                </el-row>
-               
-                <el-table
-                    :data="list"
-                    style="width: 100%">
-                    <el-table-column
-                        prop="name"
-                        label="姓名"
-                        width="180">
-                    </el-table-column>
-                    <el-table-column
-                        prop="age"
-                        label="年龄">
-                    </el-table-column>
-                    <el-table-column
-                        prop="like"
-                        label="爱好">
-                    </el-table-column>
-                </el-table>
-            </el-main>
-        </el-container>
-        <el-footer>Footer</el-footer>
-    </el-container>
+    <div>
+        <el-row style="margin:40px;">
+                <el-input v-model="inpText" placeholder="请输入内容进行筛选" style="width:30%;margin-bottom:10px;"></el-input>
+        </el-row>
+        
+        <el-table
+            :data="list"
+            style="width: 100%">
+            <el-table-column
+                prop="name"
+                label="姓名"
+                width="180">
+            </el-table-column>
+            <el-table-column
+                prop="age"
+                label="年龄">
+            </el-table-column>
+            <el-table-column
+                prop="like"
+                label="爱好">
+            </el-table-column>
+        </el-table>
+    </div>
 </template>
 <script>
     export default {
