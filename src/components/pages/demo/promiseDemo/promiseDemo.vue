@@ -70,6 +70,14 @@ export default {
         Promise.race([runAsync1(), runAsync2(), runAsync3()]).then(function(results){
             console.log(results);
         });
+        Promise.resolve({a:'123'}).then((res)=>{
+            console.log(res)
+        })
+        Promise.reject({a:'123'}).then((res)=>{
+            console.log(res)
+        }).catch((err)=>{
+            console.log('捕获失败',err);
+        })
     }
 }
 </script>
