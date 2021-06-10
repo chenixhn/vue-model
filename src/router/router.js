@@ -26,5 +26,9 @@ export default [
   {
     path: '/promiseDemo',
     component: resolve => require(['@/components/pages/demo/promiseDemo/promiseDemo'],resolve)
+  },
+  {
+    path: '/drag',
+    component: resolve => require(['@/components/pages/demo/drag/drag'],resolve)
   }
 ]

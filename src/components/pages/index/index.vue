@@ -65,6 +65,15 @@
                 promise的执行顺序及状态判断
             </div>
         </el-card>
+        <el-card class="box-card">
+            <div slot="header" class="clearfix">
+                <span>实例：vue 拖拽组件应用</span>
+                <el-button style="float: right; padding: 3px 0" type="text" @click="toDemo('drag')">点击查看实例</el-button>
+            </div>
+            <div class="text item">
+                拖拽组件应用实例
+            </div>
+        </el-card>
    </div>
 </template>
 <script>

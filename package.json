@@ -18,7 +18,9 @@
     "moment": "^2.22.2",
     "print-js": "^1.0.61",
     "vue": "^2.5.2",
+    "vue-draggable-resizable": "^2.3.0",
     "vue-router": "^3.0.1",
+    "vuedraggable": "^2.24.3",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
