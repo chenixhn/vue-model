@@ -9,8 +9,8 @@
           X: {{ x }} / Y: {{ y }} - Width: {{ width }} / Height: {{ height }}
         </p>
       </vue-draggable-resizable>
-      <vue-draggable-resizable :resizable="false" :w="150" :h="150" :x="0" :y="0" :min-width="50" :min-height="50" :parent="true"
-        :grid="[10,10]" class-name="dragging1 asd" @dragging="onDrag" @resizing="onResize">
+      <vue-draggable-resizable :resizable="false" :w="150" :h="150" :x="0" :y="0" :min-width="50" :min-height="50"
+        :parent="true" :grid="[10,10]" class-name="dragging1 asd" @dragging="onDrag" @resizing="onResize">
         <p>
           你好！ 我是一个灵活的组件。 你可以拖我四处，你可以调整我的大小。
           <br />
@@ -25,6 +25,10 @@
         <p>You can drag me around and resize me as you wish.</p>
       </vue-draggable-resizable>
     </div>
+
+    <el-rate v-model="value" :icon-classes="iconClasses" void-icon-class="icon-rate-face-off"
+      :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
+    </el-rate>
   </div>
 </template>
 <script>
@@ -37,10 +41,14 @@
         width: 0,
         height: 0,
         x: 0,
-        y: 0
+        y: 0,
+        value: 1,
+        iconClasses: ['icon-rate-face-1', 'icon-rate-face-2',
+          'icon-rate-face-3'
+        ] // 等同于 { 2: 'icon-rate-face-1', 4: { value: 'icon-rate-face-2', excluded: true }, 5: 'icon-rate-face-3' }
       };
     },
-    components:{
+    components: {
       VueDraggableResizable
     },
     methods: {
