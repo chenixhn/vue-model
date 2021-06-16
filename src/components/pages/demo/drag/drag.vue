@@ -1,6 +1,9 @@
 <template>
   <div class="helloword">
-    <div class="text-event">
+    <el-button @click="islang=true">点击</el-button>
+    <el-button @click="isnew=true">点击新增</el-button>
+    <div class="box">
+      <div class="text-event" :class="{ _lang:islang}">
       <vue-draggable-resizable :w="150" :h="150" :x="0" :y="0" :min-width="50" :min-height="50" :parent="true"
         :grid="[10,10]" class-name="dragging1" @dragging="onDrag" @resizing="onResize">
         <p>
@@ -17,7 +20,17 @@
           X: {{ x }} / Y: {{ y }} - Width: {{ width }} / Height: {{ height }}
         </p>
       </vue-draggable-resizable>
+      <vue-draggable-resizable v-if="isnew" :resizable="false" :w="150" :h="150" :x="0" :y="0" :min-width="50" :min-height="50"
+        :parent="true" :grid="[10,10]" class-name="dragging1 asd" @dragging="onDrag" @resizing="onResize">
+        <p>
+          你好！ 我是一个灵活的组件。 你可以拖我四处，你可以调整我的大小。
+          <br />
+          X: {{ x }} / Y: {{ y }} - Width: {{ width }} / Height: {{ height }}
+        </p>
+      </vue-draggable-resizable>
     </div>
+    </div>
+
 
     <!-- 相对于class等于什么的标记拖拽 注意指定 parent -->
     <div class="p-event">
@@ -38,6 +51,8 @@
     name: "HelloWorld",
     data: function () {
       return {
+        isnew:false,
+        islang:false,
         width: 0,
         height: 0,
         x: 0,
@@ -66,6 +81,11 @@
   };
 </script>
 <style lang="scss" scoped>
+  .box {
+    width: 400px;
+    height: 500px;
+    overflow: auto;
+  }
   .helloword {
     overflow: hidden;
   }
@@ -99,5 +119,10 @@
   .dragging1 {
     border: 1px solid #000;
     color: #000;
+  }
+
+  ._lang {
+    width: 500px;
+    height: 1000px;
   }
 </style>
