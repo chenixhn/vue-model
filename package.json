@@ -15,7 +15,7 @@
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.11.1",
     "html-loader": "^0.5.5",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "print-js": "^1.0.61",
     "vue": "^2.5.2",
     "vue-draggable-resizable": "^2.3.0",
